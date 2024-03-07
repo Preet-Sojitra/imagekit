@@ -1,4 +1,5 @@
 import numpy as np
+from imagekit.common import check_image
 
 
 def reduce_gray_levels(image, k):
@@ -16,17 +17,7 @@ def reduce_gray_levels(image, k):
         np.ndarray: Image with reduced gray levels
     """
 
-    # if image is not numpy array return error
-    if not isinstance(image, np.ndarray):
-        raise TypeError(
-            f"Input should be a numpy array. Expected <class 'numpy.ndarray'>, but got {type(image)}"
-        )
-
-    # if image is not grayscale return error
-    if len(image.shape) not in [2, 3]:
-        raise ValueError(
-            f"Input should be grayscale or color image. Got {len(image.shape)} dimensions"
-        )
+    check_image(image)
 
     if len(image.shape) == 2:
         intensity_levels = 2**k

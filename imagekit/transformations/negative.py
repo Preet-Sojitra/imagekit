@@ -1,4 +1,5 @@
 import numpy as np
+from imagekit.common import check_image
 
 
 def negative_transform(image):
@@ -6,6 +7,9 @@ def negative_transform(image):
 
     Args:
         image (ndarray): Input image to be transformed
+
+    Formula:
+        s = 255 - r
 
     Raises:
         TypeError: If the input is not a numpy array
@@ -15,11 +19,7 @@ def negative_transform(image):
         ndarray: Transformed image
     """
 
-    # check the image type
-    if not isinstance(image, np.ndarray):
-        raise TypeError(
-            f"Input should be a numpy array. Expected <class 'numpy.ndarray'>, but got {type(image)}"
-        )
+    check_image(image)
 
     # check the image shape
     if len(image.shape) == 2:
@@ -31,7 +31,3 @@ def negative_transform(image):
             transformed_img[:, :, i] = 255 - image[:, :, i]
 
         return transformed_img
-    else:
-        raise ValueError(
-            f"Input should be a grayscale or color image. Got {len(image.shape)} dimensions"
-        )

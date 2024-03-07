@@ -1,4 +1,5 @@
 import numpy as np
+from imagekit.common import check_image
 
 
 def logarithmic_transform(image, c=1):
@@ -19,17 +20,7 @@ def logarithmic_transform(image, c=1):
         np.ndarray: Transformed image
     """
 
-    # if image not numpy array return error
-    if not isinstance(image, np.ndarray):
-        raise TypeError(
-            f"Input should be a numpy array. Expected <class 'numpy.ndarray'>, but got {type(image)}"
-        )
-
-    # if image not grayscale or color return error
-    if len(image.shape) not in [2, 3]:
-        raise ValueError(
-            f"Input should be a grayscale or color image. Got {len(image.shape)} dimensions"
-        )
+    check_image(image)
 
     # Normalizing the image
     image = image / 255.0
