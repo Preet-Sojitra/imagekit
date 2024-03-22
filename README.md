@@ -8,4 +8,7 @@ Image Processing Library for Python. Implements a variety of image processing al
 
 
 ---
-More details will be added soon.
+Various implemenatations of image processing algorithms from scratch using Python has been implemented in [this repository](https://github.com/Preet-Sojitra/DIP) as part of Digital Image Processing course at my university.
+
+---
+Will be soon publishing this library on PyPi for easy installation and usage.
