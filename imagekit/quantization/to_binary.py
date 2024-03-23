@@ -17,4 +17,7 @@ def to_binary(im, threshold=127):
     im[im > threshold] = 255
     im[im <= threshold] = 0
 
+    # convert 255 to 1
+    im[im == 255] = 1
+
     return im
