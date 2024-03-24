@@ -1,5 +1,5 @@
 import numpy as np
-from imagekit.common import check_image
+from optivision.common import check_image
 
 
 def reduce_gray_levels(image, k):

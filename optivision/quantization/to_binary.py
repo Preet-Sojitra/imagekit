@@ -1,4 +1,4 @@
-from imagekit.common import check_image
+from optivision.common import check_image
 
 
 def to_binary(im, threshold=127):

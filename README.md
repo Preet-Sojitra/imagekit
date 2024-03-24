@@ -1,4 +1,4 @@
-# ImageKit
+# OptiVision
 
 Image Processing Library for Python. Implements a variety of image processing algorithms from scratch.
 
