@@ -40,3 +40,7 @@ img = Image.fromarray(img)
 img.show()
 ```
 
+## Documentation
+
+The official documentation is hosted on [Read the Docs](https://optivision.readthedocs.io/en/latest/index.html).
+
