@@ -4,5 +4,4 @@ __pycache__
 testing
 dist
 optivision.egg-info
-
-poetry.lock
+docs
