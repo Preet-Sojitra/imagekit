@@ -16,3 +16,27 @@ Various implemenatations of image processing algorithms from scratch using Pytho
 ```bash
 pip install optivision
 ```
+
+## Usage
+
+```python
+from PIL import Image
+from optivision.transformations.logarithmic import logarithmic_transform
+import numpy as np
+
+# Load image
+img = Image.open('path/to/image.jpg')
+
+# Convert image to numpy array
+img = np.array(img)
+
+# Apply logarithmic transformation
+img = logarithmic_transform(img, c=3)
+
+# Convert numpy array to image
+img = Image.fromarray(img)
+
+# show image
+img.show()
+```
+
