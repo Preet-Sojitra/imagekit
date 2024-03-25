@@ -4,4 +4,7 @@ __pycache__
 testing
 dist
 optivision.egg-info
-docs
+docs/_build
+docs/_static
+docs/_templates
+docs/images
